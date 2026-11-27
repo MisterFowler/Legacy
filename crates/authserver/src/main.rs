@@ -1,5 +1,11 @@
+use tracing::{info, Level};
+
 fn main() {
-    println!("Legacy Authentication Server");
-    println!("Version: {}", env!("CARGO_PKG_VERSION"));
-    println!("Starting authentication server...");
+    tracing_subscriber::fmt()
+        .with_max_level(Level::INFO)
+        .init();
+
+    info!("Legacy Authentication Server");
+    info!("Version: {}", env!("CARGO_PKG_VERSION"));
+    info!("Starting authentication server...");
 }
