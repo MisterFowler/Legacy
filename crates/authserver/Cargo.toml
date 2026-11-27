@@ -1,0 +1,6 @@
+[package]
+name = "authserver"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
